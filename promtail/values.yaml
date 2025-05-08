@@ -1,0 +1,18 @@
+loki:
+  url: http://loki:3100/loki/api/v1/push
+
+resources: {}
+tolerations: []
+nodeSelector: {}
+
+rbac:
+  create: true
+  serviceAccountName: promtail
+
+podLabels: {}
+
+# Adjust path matching based on your nodes
+logPaths:
+  - path: /var/log/*.log
+    labels:
+      job: varlogs
