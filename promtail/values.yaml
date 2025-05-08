@@ -16,3 +16,6 @@ logPaths:
   - path: /var/log/*.log
     labels:
       job: varlogs
+
+serviceMonitor:
+  enabled: false
